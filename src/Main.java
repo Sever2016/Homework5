@@ -8,15 +8,13 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         //Задача 2
-        int yearOfRealise = 2014;
+        int clientDeviceYear = 2014;
         clientOS = 0;
-        if (clientOS == 0) {
-            if (yearOfRealise >= 2015) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else {
+        if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 0 && clientDeviceYear < 2015) {
                 System.out.println("Установите облегчённую версию приложения для iOS по ссылке");
-            }
-        } else if (yearOfRealise >= 2015) {
+        } else if (clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Установите облегчённую версию приложения для Android по ссылке");
@@ -32,14 +30,14 @@ public class Main {
         }
         //Задача 4
         int deliveryDistance = 55;
-        int daysOfDelivery = 1;
         if (deliveryDistance >= 100) {
             System.out.println("Доставка не осуществляется");
+        } else  if (deliveryDistance >=60){
+            System.out.println("Доставка займёт 3 дня");
+        } else if (deliveryDistance >= 20) {
+            System.out.println("Доставка займёт 2 дня");
         } else {
-            if (deliveryDistance % 40 > 20) {
-                daysOfDelivery = daysOfDelivery + deliveryDistance / 40 + 1;
-            } else daysOfDelivery = daysOfDelivery + deliveryDistance / 40;
-            System.out.println("Потребуется дней: " + daysOfDelivery);
+            System.out.println("Доставка займёт 1 день");
         }
         //Задача 5
         int monthNumber = 2;
